@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#punctuation {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  height: 100px;
+  justify-content: flex-end;
+  padding: 0 35px;
+  width: 100%;
+}
+
+#simon {
+  --square: 600px;
+  background: #000;
+  border-radius: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: var(--square);
+  padding: 10px;
+  position: relative;
+  width: var(--square);
+}
+
+.btn {
+  --btnSize: 290px;
+  border: 10px solid #000;
+  height: var(--btnSize);
+  width: var(--btnSize);
+}
+
+.btn.btn-green {
+  background: #008000;
+  border-top-left-radius: 100%;
+}
+
+.btn.btn-red {
+  background: #fe0c04;
+  border-top-right-radius: 100%;
+}
+
+.btn.btn-yellow {
+  background: #fffd05;
+  border-bottom-left-radius: 100%;
+}
+
+.btn.btn-blue {
+  background: #0125ff;
+  border-bottom-right-radius: 100%;
+}
+
+#game-info {
+  --containerPosition: 125px;
+  --containerSize: 350px;
+  background: #000;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 80px;
+  height: var(--containerSize);
+  left: var(--containerPosition);
+  padding-top: 70px;
+  position: absolute;
+  text-align: center;
+  top: var(--containerPosition);
+  width: var(--containerSize);
+}
+
+#game-info button {
+  --buttonSize: 100px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  height: var(--buttonSize);
+  margin: 0 auto 25px;
+  outline: 0;
+  width: var(--buttonSize);
+}
