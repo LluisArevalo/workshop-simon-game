@@ -41,28 +41,45 @@ body {
 .btn {
   --btnSize: 290px;
   border: 10px solid #000;
+  cursor: pointer;
   height: var(--btnSize);
   width: var(--btnSize);
 }
 
-.btn.btn-green {
-  background: #008000;
+.btn-green {
+  background: rgb(0, 128, 0);
   border-top-left-radius: 100%;
 }
 
-.btn.btn-red {
-  background: #fe0c04;
+.btn-green:hover {
+  background: rgba(0, 128, 0, .9);
+}
+
+.btn-red {
+  background: rgb(254, 12, 4);
   border-top-right-radius: 100%;
 }
 
-.btn.btn-yellow {
-  background: #fffd05;
+.btn-red:hover {
+  background: rgba(254, 12, 4, .9);
+}
+
+.btn-yellow {
+  background: rgb(255, 255, 5);
   border-bottom-left-radius: 100%;
 }
 
-.btn.btn-blue {
-  background: #0125ff;
+.btn-yellow:hover {
+  background: rgba(255, 255, 5, .9);
+}
+
+.btn-blue {
+  background: rgb(1, 37, 255);
   border-bottom-right-radius: 100%;
+}
+
+.btn-blue:hover {
+  background: rgba(1, 37, 255, .9);
 }
 
 #game-info {
@@ -92,4 +109,10 @@ body {
   margin: 0 auto 25px;
   outline: 0;
   width: var(--buttonSize);
+}
+
+#game-info button:disabled {
+  background: #aaa;
+  border-color: #aaa;
+  cursor: default;
 }
