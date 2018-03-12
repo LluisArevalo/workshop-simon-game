@@ -1,3 +1,8 @@
-$(document).ready(function() {
-  console.log('Let\'s create the Simon game');
-});
+function SimonGame() {
+  this.init = function() {
+    console.log('Initializing simon game...');
+  }
+}
+
+var simon = new SimonGame();
+simon.init();
