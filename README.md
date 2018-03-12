@@ -2,6 +2,8 @@
 
 ## Notes
 
+The following notes are related with the design and the expected behaviour. During the execution of the simon game, we'll have to update the look and field of the game depending on the status. Consider the following:
+
 ### Punctuation
 
 - Show: Add `hide` class to the `#punctuation` element.
