@@ -26,6 +26,10 @@ body {
   width: 100%;
 }
 
+#punctuation.hide {
+  visibility: hidden;
+}
+
 #simon {
   --square: 600px;
   background: #000;
