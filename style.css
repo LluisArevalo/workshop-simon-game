@@ -42,48 +42,59 @@ body {
   width: var(--square);
 }
 
+#simon.blocked,
+button.blocked {
+  pointer-events: none;
+}
+
 .btn {
   --btnSize: 290px;
   border: 10px solid #000;
   cursor: pointer;
   height: var(--btnSize);
+  outline: 0;
+  transition: .3s ease-in-out background;
   width: var(--btnSize);
 }
 
 .btn-green {
-  background: rgb(0, 128, 0);
+  background: rgba(35, 200, 82, 0.5);
   border-top-left-radius: 100%;
 }
 
-.btn-green:hover {
-  background: rgba(0, 128, 0, .9);
+.btn-green:hover,
+.btn-green.active {
+  background: rgba(35, 200, 82, 1);
 }
 
 .btn-red {
-  background: rgb(254, 12, 4);
+  background: rgba(254, 35, 34, 0.5);
   border-top-right-radius: 100%;
 }
 
-.btn-red:hover {
-  background: rgba(254, 12, 4, .9);
+.btn-red:hover,
+.btn-red.active {
+  background: rgba(254, 35, 34, 1);
 }
 
 .btn-yellow {
-  background: rgb(255, 255, 5);
+  background: rgba(243, 194, 16, 0.5);
   border-bottom-left-radius: 100%;
 }
 
-.btn-yellow:hover {
-  background: rgba(255, 255, 5, .9);
+.btn-yellow:hover,
+.btn-yellow.active {
+  background: rgba(243, 194, 16, 1);
 }
 
 .btn-blue {
-  background: rgb(1, 37, 255);
+  background: rgba(0, 103, 208, 0.5);
   border-bottom-right-radius: 100%;
 }
 
-.btn-blue:hover {
-  background: rgba(1, 37, 255, .9);
+.btn-blue:hover,
+.btn-blue.active {
+  background: rgba(0, 103, 208, 1);
 }
 
 #game-info {
