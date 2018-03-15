@@ -18,7 +18,7 @@ Simon Game is a classic game where the player receives a sequence of colors that
 - Text Editor: Visual Studio Code, Atom, Sublime...
 - Google Chrome broswer.
 - Google Chrome Dev Tools (cmd + alt + J).
-- The code base you can find in the following URL: github.com/LluisArevalo/workshop-simon-game
+- The code base you can find in the following URL: [github.com/LluisArevalo/workshop-simon-game](https://www.github.com/LluisArevalo/workshop-simon-game)
 - Replit (instructor) to show small examples of code.
 
 ## Start button
@@ -33,16 +33,18 @@ $("#game-info").find("button").on("click", function() {
 });
 ```
 
-**Don't worry about it, it seems complicated, but it's the only piece of code that we are going to copy-paste, promise :)**
+**Don't worry if it seems complicated, it's the only piece of code that we are going to copy-paste, promise :)**
 
-We'll go in deep in this code at the end of the workshop. Open you Google Chrome Dev Tools (cmd + alt + J) to see your Dev Console. It will be very helpful during our work. Right now it has an error, so let's start creating our own code.
+We'll go in deep in this code at the end of the workshop. Open you Google Chrome Dev Tools (cmd + alt + J) to see your Dev Console. It will be very helpful during our work.
+
+As soon as we click in the start button in the center of the Simon, it appears an error in the console. Let's start creating our own code to solve this error.
 
 ## Global variables
 
 - Colors: array with 4 strings
 
 ```
-**What a variable is**
+What a variable is
 
 Item that contains information. There are a few types of variables, here we'll need integer, arrays, strings, and booleans.
 ```
@@ -50,7 +52,7 @@ Item that contains information. There are a few types of variables, here we'll n
 ## Methods
 
 ```
-**What a method is**
+What a method is
 
 A method, also called function, is a piece of code that is repeated as many times as we want. To execute it, we have to call (execute) the function.
 ```
@@ -65,9 +67,9 @@ Right now, we have an empty method, let's add some information to start our game
 
 Every time we start a new game, we need some variables with an specific value. These are:
 
-- `sequence`: array that will contain the sequence that the player needs to repeat. *Default value: empty array*
-- `userClickCount`: integer that will contain how many buttons have been pressed by the user to repeat the sequence. *Default value: 0*
-- `round`: integer that will indicate the round that is playing the user. *Default value: 1*
+- `sequence`: array that will contain the sequence that the player needs to repeat. **Default value: empty array**
+- `userClickCount`: integer that will contain how many buttons have been pressed by the user to repeat the sequence. **Default value: 0**
+- `round`: integer that will indicate the round that is playing the user. **Default value: 1**
 
 #### Actions
 
@@ -82,7 +84,7 @@ Once we have defined all the variables, we need to do some actions to let the pl
   - Change the button text by `Playing...` to let the user know that the game has started.
 
 ```
-**Method definition and method execution**
+Method definition and method execution
 
 We have to distinguish between define and execute a method:
 
@@ -97,7 +99,7 @@ We create methods to execute the same code from different places among our code.
 It will show the current round to the user. To do that, we have to select the span with ID `counter` and update its text. The value we are going to use is the one we have stored in `this.round`.
 
 ```
-**jQuery**
+jQuery
 
 - $ allows us to execute jQuery.
 - jQuery selectors allow us to select an specific element in the HTML.
@@ -109,7 +111,7 @@ It will show the current round to the user. To do that, we have to select the sp
 Next up, we need to generate a sequence to start the game. Without a sequence, this game makes no sense at all. The first sequence that we will generate, will be composed by 3 colors. Everytime the player inserts the sequence correctly, we are going to add a new color to it. To do that, we are going to define a `generateSequence` method that receives one parameter.
 
 ```
-**What a parameter is?**
+What a parameter is
 
 A parameter is a variable passed to a method that allow us to execute a method which result will be different, depending on the value of this parameter.
 ```
@@ -117,7 +119,7 @@ A parameter is a variable passed to a method that allow us to execute a method w
 So we have to generate a sequence of X colors, which depends on the parameter that we are passing to the method. To do that, we are going to create a loop to execute several times the same action.
 
 ```
-**What a loop is?**
+What a loop is
 
 A loop is a piece of code which helps us execute several times the same code.
 ```
@@ -125,7 +127,7 @@ A loop is a piece of code which helps us execute several times the same code.
 To finish up this method, we need to pick up a random color from the `colors` global variable. To do that, we are going to create a new `generateRandom` method to generate a random number. Once we generate this random number, we are going to add it inside the `sequence` through `this.sequence`.
 
 ```
-**What `this` is?**
+What `this` is
 
 At this point, the real meaning of the reserved word `this` is difficult to understand, so we are going to keep it super simple (KISS principle in Software Engineering). `this` allow us to share information among the different methods that we have inside our game.
 ```
@@ -137,7 +139,7 @@ In this method, we are going to generate a random number to pick up a color from
 Once we generate this number, we have to `return` this value.
 
 ```
-**What `return` is?**
+What `return` is
 
 Some methods execute an independent action (like changing a text in the HTML). However, there are other methods that need to return a value that is needed in another method.
 
@@ -155,7 +157,7 @@ The next thing we need to do is to create a `setInterval` that we are going to u
 Once we have shown all the elements in the sequence, we are going to finish the interval by calling the `clearInterval` method, and we'll remove the `blocked` class form the `#simon` HTML element.
 
 ```
-**What a `setInterval` is?**
+What a `setInterval` is
 
 A `setInterval` allow us to execute, for a certain amount of milliseconds, the same code.
 ```
@@ -163,7 +165,7 @@ A `setInterval` allow us to execute, for a certain amount of milliseconds, the s
 We are going to use a conditional to execute different code, based on the current element of the sequence that we are showing. We are going to stop the interval when the current item, `i`, has the same value than the sequence's length.
 
 ```
-**What a coinditional is?**
+What a coinditional is
 
 A conditional (`if...else`) allow us to compare two values and execute a certain code depending on the value of this comparisson, which can be `true` or `false`.
 ```
@@ -178,7 +180,7 @@ But how can we show the element of the sequence in the screen? We need to add th
 We will concatenate the sequence element with the `.btn-` string to compose the jQuery selector that we are going to need.
 
 ```
-**What does concatenate mean?**
+What does concatenate mean
 
 We can concatenate different strings to compose dynamic elements, usually composed by an static string, `btn-` and a dynamic part, the current color in the sequence.
 ```
@@ -190,7 +192,7 @@ Right now, we are showing each color during 1 second. Let's remove the class aft
 Again, 🤯 🤯 🤯
 
 ```
-**What a `setTimeout` is?**
+What a `setTimeout` is
 
 A `setTimeout` allow us to execute a code just once after a certain amount of time.
 ```
@@ -255,7 +257,7 @@ If you think it's super easy to change the text, we can give a chance to another
 To do that, we need to create a `setInterval` that will be triggered 6 times every 300 miliseconds, and we are going to toggle the `active` class to the buttons. Once the `setInterval` has been executed 6 times, we are going to stop it.
 
 ```
-**What does toggle mean?**
+What does toggle mean
 
 If we toggle a CSS class to an element, it will:
 
